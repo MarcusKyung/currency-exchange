@@ -21,7 +21,7 @@ function printElements(response) {
 }
 
 function printError(error) {
-  document.querySelector('#resultsHeader').innerText = `there was an error accessing currency exchange data for ${error[2]} and ${error[3]} - Error Code: ${error[0].status}`;
+  document.querySelector('#resultsHeader').innerText = `there was an error accessing currency exchange data for ${error[2]} and ${error[3]} - Error Code: ${error[0].status} ${error[1]["error-type"]}`;
 }
 
 function handleFormSubmission(event) {
