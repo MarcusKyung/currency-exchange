@@ -33,14 +33,15 @@ _This application is designed to convert currencies using live exchange rate dat
 
 ## Setup/Installation Requirements
 
-* _Download project repository from GH to local machine_
-* _Navigate to the root directory of the project file using your device's terminal_
-* _Add a .env file at the root level of the project directory using the terminal command "touch .env"_
-* _Using your device's browser, navigate to https://app.exchangerate-api.com/sign-up. Enter an email and designate a password then click "Accept Terms & Create API Key!". Once an API key is generated on the account confirmation screen copy it to your device's clipboard._
+* _Download project repository from GH to local machine._
+* _Navigate to the root directory of the project file using your device's terminal._
+* _Add a .env file at the root level of the project directory using the terminal command "touch .env"._
+* _Using your device's browser, navigate to https://app.exchangerate-api.com/sign-up. Enter an email and designate a password then click "Accept Terms & Create API Key!". Use of this application requires the free tier of ExchangeRate-API at minimum. Once an API key is generated on the account confirmation screen copy it to your device's clipboard._
 * _Open your .env file using VS Code or your device's default text edit software and paste your API key using the following syntax: ```API_KEY=YOUR-API-KEY-HERE```. Save the .env file._
-* _Use local machine terminal to install all project packages using command ```$ npm install```_
-* _Use local machine terminal to build project using command ```$ npm build```_
-* _Use local machine terminal to start development server using command ```$ npm start```_
+* _Use local machine terminal to install all project packages using command ```$ npm install```._
+* _Use local machine terminal to build project using command ```$ npm build```._
+* _Use local machine terminal to start development server using command ```$ npm start```._
+* _Open application in your machine's browser._
 * _Use the program's interface to enter an amount to be converted and a "to" and "from" currency. Once all inputs are designated click green "Convert Currency" button to generate results._
 
 
