@@ -12,14 +12,18 @@ h2 {
 }
 
 input {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  border-radius: 20px;
 }
-
-
 
 h4 {
   font-style: italic;
+}
+
+h4:hover {
+  text-decoration: underline;
 }
 
 p {
@@ -35,5 +39,17 @@ p {
 
 button {
   width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+select{
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+}
+
+.print {
+  border-radius: 5px;
 }
 

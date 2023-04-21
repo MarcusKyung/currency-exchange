@@ -15,7 +15,7 @@ function getCurrency(currencyFrom, currencyTo, currencyAmount) {
 // UI Logic
 function printElements(response) {
   const resultsDiv = document.getElementById('resultsDiv');
-  resultsDiv.setAttribute('class', 'row');
+  resultsDiv.setAttribute('class', 'row print');
   const resultsContainer = document.createElement('div');
   resultsDiv.appendChild(resultsContainer);
   const currencies = document.createElement('h4');
@@ -23,10 +23,10 @@ function printElements(response) {
   resultsContainer.appendChild(currencies);
   const updateTime = document.createElement('p');  
   updateTime.innerText = `Conversion Rate as of : ${response[0].time_last_update_utc} UTC`;
-  updateTime.setAttribute('class', 'time')
+  updateTime.setAttribute('class', 'time');
   resultsContainer.appendChild(updateTime);
   const exchangeRateResults = document.createElement('p');
-  exchangeRateResults.innerText = `1 ${response[1]} >>> ${response[2]}`;
+  exchangeRateResults.innerText = `1 ${response[1]} >>> ${response[0].conversion_rate} ${response[2] }`;
   resultsContainer.appendChild(exchangeRateResults);
   const exchangeAmountResults = document.createElement('p');
   exchangeAmountResults.innerText = `${response[3]} ${response[1]} converted to ${response[2]} is ${response[0].conversion_result} ${response[2]}`;
@@ -52,8 +52,6 @@ function handleFormSubmission(event) {
   const currencyFrom = document.querySelector('#currencyFrom').value;
   const currencyTo = document.querySelector('#currencyTo').value;
   const currencyAmount = document.querySelector('#currencyAmount').value;
-  document.querySelector('#currencyFrom').value = null;
-  document.querySelector('#currencyTo').value = null;
   document.querySelector('#currencyAmount').value = null;
   getCurrency(currencyFrom, currencyTo, currencyAmount);
 }
