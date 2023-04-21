@@ -1,0 +1,15 @@
+#headerDiv {
+  background-color: black;
+  color: white;
+}
+
+#formDiv {
+  background-color: black;
+  color: white;
+  padding-bottom: 20px
+}
+
+#resultsDiv {
+  background-color: white;
+}
+

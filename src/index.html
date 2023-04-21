@@ -4,20 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="./assets/images/currencySwap.png"> 
   <title>Currency Exchanger</title>
 </head>
 <body>
-  <h1>Currency Converter:</h1>
+
   <div id="formDiv">
+    <h1>Currency Converter:</h1>
     <form id="currencyConverter">
-      <label for="currencyFrom">Currency From:</label>
+      <label for="currencyAmount">Amount:</label>
+      <input id="currencyAmount" type="number" name="currencyAmount" min="1" required>
+      <br>
       <select name="currencyFrom" id="currencyFrom" required>
         <option disabled selected value> -- Common Selections -- </option>
         <option value="USD" id="USDFrom">United States Dollar---United States</option>
         <option value="EUR" id="EURFrom">Euro---European Union</option>
         <option value="GBP" id="GBPFrom">Pound Sterling---United Kingdom</option>
         <option value="JPY" id="JPYFrom">Japanese Yen---Japan</option>
-        <option disabled selected value> -- </option>
+        <option disabled selected value> -- Currency From -- </option>
         <option value="AED" id="AEDFrom">UAE Dirham---United Arab Emirates</option>
         <option value="AFN" id="AFNFrom">Afghan Afghani---Afghanistan</option>
         <option value="ALL" id="ALLFrom">Albanian Lek---Albania</option>
@@ -183,7 +187,8 @@
         <option value="EUR" id="EURTo">Euro---European Union</option>
         <option value="GBP" id="GBPTo">Pound Sterling---United Kingdom</option>
         <option value="JPY" id="JPYTo">Japanese Yen---Japan</option>
-        <option disabled selected value> -- </option>
+        <option value="XXX" id="XXXTo">BAD RESPONSE TEXT</option>
+        <option disabled selected value> -- Currency To -- </option>
         <option value="AED" id="AEDTo">UAE Dirham---United Arab Emirates</option>
         <option value="AFN" id="AFNTo">Afghan Afghani---Afghanistan</option>
         <option value="ALL" id="ALLTo">Albanian Lek---Albania</option>
@@ -342,12 +347,8 @@
         <option value="ZMW" id="ZMWTo">Zambian Kwacha---Zambia</option>
         <option value="ZWL" id="ZWLTo">Zimbabwean Dollar---Zimbabwe</option>
       </select>
-      <label for="currencyAmount">Amount:</label>
-      <input id="currencyAmount" type="number" name="currencyAmount" min="1" required>
-      <input type="radio" id="swapCurrency" name="swapCurrency" value="Yes">
-      <label for="swapCurrency">Swap Currency</label>
       <br>
-      <button type="submit" class="btn-success" id="convertCurrency">Convert Currency</button>
+      <button type="submit" class="btn btn-light" id="convertCurrency">Convert Currency</button>
     </form>
   </div>
   <div id="resultsDiv">
