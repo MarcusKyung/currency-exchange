@@ -1,5 +1,9 @@
 body {
-  font-family:Georgia, 'Times New Roman', Times, serif
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.time {
+  font-style: italic;
 }
 
 h2 {
@@ -11,6 +15,8 @@ input {
   padding-top: 20px;
   padding-bottom: 20px;
 }
+
+
 
 h4 {
   font-style: italic;
@@ -30,3 +36,4 @@ p {
 button {
   width: 100%;
 }
+
