@@ -14,12 +14,14 @@
         <h1>Currency Converter:</h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <form id="currencyConverter">
-            <label for="currencyAmount">Amount:</label>
-            <input id="currencyAmount" type="number" name="currencyAmount" min="1" required>
-            <br>
+      <form id="currencyConverter">
+        <div class="row">
+          <div class="col">
+            <input id="currencyAmount" type="number" name="currencyAmount" min="1" placeholder="Amount" required>
+          </div>
+          <br>
+        <div class="row">
+          <div class="col-md-6">
             <select name="currencyFrom" id="currencyFrom" required>
               <option disabled selected value> -- Common Selections -- </option>
               <option value="USD" id="USDFrom">United States Dollar---United States</option>
@@ -185,7 +187,8 @@
               <option value="ZMW" id="ZMWFrom">Zambian Kwacha---Zambia</option>
               <option value="ZWL" id="ZWLFrom">Zimbabwean Dollar---Zimbabwe</option>
             </select>
-            <label for="currencyTo">Currency To:</label>
+          </div>
+          <div class="col-md-6">
             <select name="currencyTo" id="currencyTo" required>
               <option disabled selected value> -- Common Selections -- </option>
               <option value="USD" id="USDTo">United States Dollar---United States</option>
@@ -352,11 +355,14 @@
               <option value="ZMW" id="ZMWTo">Zambian Kwacha---Zambia</option>
               <option value="ZWL" id="ZWLTo">Zimbabwean Dollar---Zimbabwe</option>
             </select>
+          </div>
             <br>
-          <button type="submit" class="btn btn-light" id="convertCurrency">Convert Currency</button>
-        </form>
-      </div>
-    </div>
+          </div>
+        <button type="submit" class="btn btn-light" id="convertCurrency">Convert Currency</button>
+        
+        </div>
+      </form>
+    <!-- </div> -->
     <div class="row">
       <div class="col">
         <div id="resultsDiv">

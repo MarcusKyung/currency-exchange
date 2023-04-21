@@ -1,24 +1,13 @@
-/* #headerDiv {
-  background-color: black;
-  color: white;
-}
-
-#formDiv {
-  background-color: black;
-  color: white;
-  padding-bottom: 20px
-}
-
-#resultsDiv {
-  background-color: white;
-}
- */
-
 body {
   font-family:Georgia, 'Times New Roman', Times, serif
 }
 
 h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+input {
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -30,4 +19,14 @@ h4 {
 p {
   padding: 0px;
   margin: 0px;
+}
+
+#currencyAmount {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+button {
+  width: 100%;
 }
