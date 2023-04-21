@@ -16,12 +16,12 @@ function getCurrency(currencyFrom, currencyTo, currencyAmount) {
 function printElements(response) {
   const exchangeRateResults = document.getElementById('exchangeRate');
   const exchangeAmountResults = document.getElementById('exchangeResults');
-  exchangeRateResults.innerText = `The current exchange rate from ${response[1]} to ${response[2]} is ${response[0].conversion_rate}.`;
+  exchangeRateResults.innerText = `As of ${response[0].time_last_update_utc} the current exchange rate from ${response[1]} to ${response[2]} is ${response[0].conversion_rate}.`;
   exchangeAmountResults.innerText = `${response[3]} of ${response[1]} in ${response[2]} is ${response[0].conversion_result} `;
 }
 
 function printError(error) {
-  document.querySelector('#resultsHeader').innerText = `there was an error accessing currency exchange data for ${error[2]} and ${error[3]}: ${error[0].status} ${error[1].error}`;
+  document.querySelector('#resultsHeader').innerText = `there was an error accessing currency exchange data for ${error[2]} and ${error[3]} - Error Code: ${error[0].status}`;
 }
 
 function handleFormSubmission(event) {
