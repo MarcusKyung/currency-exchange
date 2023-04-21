@@ -8,11 +8,16 @@
 </head>
 <body>
   <h1>Currency Converter:</h1>
-  <div>
+  <div id="formDiv">
     <form id="currencyConverter">
       <label for="currencyFrom">Currency From:</label>
       <select name="currencyFrom" id="currencyFrom" required>
-        <option disabled selected value> -- select an option -- </option>
+        <option disabled selected value> -- Common Selections -- </option>
+        <option value="USD" id="USDFrom">United States Dollar---United States</option>
+        <option value="EUR" id="EURFrom">Euro---European Union</option>
+        <option value="GBP" id="GBPFrom">Pound Sterling---United Kingdom</option>
+        <option value="JPY" id="JPYFrom">Japanese Yen---Japan</option>
+        <option disabled selected value> -- </option>
         <option value="AED" id="AEDFrom">UAE Dirham---United Arab Emirates</option>
         <option value="AFN" id="AFNFrom">Afghan Afghani---Afghanistan</option>
         <option value="ALL" id="ALLFrom">Albanian Lek---Albania</option>
@@ -55,11 +60,9 @@
         <option value="EGP" id="EGPFrom">Egyptian Pound---Egypt</option>
         <option value="ERN" id="ERNFrom">Eritrean Nakfa---Eritrea</option>
         <option value="ETB" id="ETBFrom">Ethiopian Birr---Ethiopia</option>
-        <option value="EUR" id="EURFrom">Euro---European Union</option>
         <option value="FJD" id="FJDFrom">Fiji Dollar---Fiji</option>
         <option value="FKP" id="FKPFrom">Falkland Islands Pound---Falkland Islands</option>
         <option value="FOK" id="FOKFrom">Faroese Króna---Faroe Islands</option>
-        <option value="GBP" id="GBPFrom">Pound Sterling---United Kingdom</option>
         <option value="GEL" id="GELFrom">Georgian Lari---Georgia</option>
         <option value="GGP" id="GGPFrom">Guernsey Pound---Guernsey</option>
         <option value="GHS" id="GHSFrom">Ghanaian Cedi---Ghana</option>
@@ -83,7 +86,6 @@
         <option value="JEP" id="JEPFrom">Jersey Pound---Jersey</option>
         <option value="JMD" id="JMDFrom">Jamaican Dollar---Jamaica</option>
         <option value="JOD" id="JODFrom">Jordanian Dinar---Jordan</option>
-        <option value="JPY" id="JPYFrom">Japanese Yen---Japan</option>
         <option value="KES" id="KESFrom">Kenyan Shilling---Kenya</option>
         <option value="KGS" id="KGSFrom">Kyrgyzstani Som---Kyrgyzstan</option>
         <option value="KHR" id="KHRFrom">Cambodian Riel---Cambodia</option>
@@ -158,7 +160,6 @@
         <option value="TZS" id="TZSFrom">Tanzanian Shilling---Tanzania</option>
         <option value="UAH" id="UAHFrom">Ukrainian Hryvnia---Ukraine</option>
         <option value="UGX" id="UGXFrom">Ugandan Shilling---Uganda</option>
-        <option value="USD" id="USDFrom">United States Dollar---United States</option>
         <option value="UYU" id="UYUFrom">Uruguayan Peso---Uruguay</option>
         <option value="UZS" id="UZSFrom">Uzbekistani So'm---Uzbekistan</option>
         <option value="VES" id="VESFrom">Venezuelan Bolívar Soberano---Venezuela</option>
@@ -177,7 +178,12 @@
       </select>
       <label for="currencyTo">Currency To:</label>
       <select name="currencyTo" id="currencyTo" required>
-        <option disabled selected value> -- select an option -- </option>
+        <option disabled selected value> -- Common Selections -- </option>
+        <option value="USD" id="USDTo">United States Dollar---United States</option>
+        <option value="EUR" id="EURTo">Euro---European Union</option>
+        <option value="GBP" id="GBPTo">Pound Sterling---United Kingdom</option>
+        <option value="JPY" id="JPYTo">Japanese Yen---Japan</option>
+        <option disabled selected value> -- </option>
         <option value="AED" id="AEDTo">UAE Dirham---United Arab Emirates</option>
         <option value="AFN" id="AFNTo">Afghan Afghani---Afghanistan</option>
         <option value="ALL" id="ALLTo">Albanian Lek---Albania</option>
@@ -220,11 +226,9 @@
         <option value="EGP" id="EGPTo">Egyptian Pound---Egypt</option>
         <option value="ERN" id="ERNTo">Eritrean Nakfa---Eritrea</option>
         <option value="ETB" id="ETBTo">Ethiopian Birr---Ethiopia</option>
-        <option value="EUR" id="EURTo">Euro---European Union</option>
         <option value="FJD" id="FJDTo">Fiji Dollar---Fiji</option>
         <option value="FKP" id="FKPTo">Falkland Islands Pound---Falkland Islands</option>
         <option value="FOK" id="FOKTo">Faroese Króna---Faroe Islands</option>
-        <option value="GBP" id="GBPTo">Pound Sterling---United Kingdom</option>
         <option value="GEL" id="GELTo">Georgian Lari---Georgia</option>
         <option value="GGP" id="GGPTo">Guernsey Pound---Guernsey</option>
         <option value="GHS" id="GHSTo">Ghanaian Cedi---Ghana</option>
@@ -248,7 +252,6 @@
         <option value="JEP" id="JEPTo">Jersey Pound---Jersey</option>
         <option value="JMD" id="JMDTo">Jamaican Dollar---Jamaica</option>
         <option value="JOD" id="JODTo">Jordanian Dinar---Jordan</option>
-        <option value="JPY" id="JPYTo">Japanese Yen---Japan</option>
         <option value="KES" id="KESTo">Kenyan Shilling---Kenya</option>
         <option value="KGS" id="KGSTo">Kyrgyzstani Som---Kyrgyzstan</option>
         <option value="KHR" id="KHRTo">Cambodian Riel---Cambodia</option>
@@ -323,7 +326,6 @@
         <option value="TZS" id="TZSTo">Tanzanian Shilling---Tanzania</option>
         <option value="UAH" id="UAHTo">Ukrainian Hryvnia---Ukraine</option>
         <option value="UGX" id="UGXTo">Ugandan Shilling---Uganda</option>
-        <option value="USD" id="USDTo">United States Dollar---United States</option>
         <option value="UYU" id="UYUTo">Uruguayan Peso---Uruguay</option>
         <option value="UZS" id="UZSTo">Uzbekistani So'm---Uzbekistan</option>
         <option value="VES" id="VESTo">Venezuelan Bolívar Soberano---Venezuela</option>
@@ -342,8 +344,16 @@
       </select>
       <label for="currencyAmount">Amount:</label>
       <input id="currencyAmount" type="number" name="currencyAmount" min="1" required>
+      <input type="radio" id="swapCurrency" name="swapCurrency" value="Yes">
+      <label for="swapCurrency">Swap Currency</label>
+      <br>
+      <button type="submit" class="btn-success" id="convertCurrency">Convert Currency</button>
     </form>
+  </div>
+  <div id="resultsDiv">
     <h2 id="resultsHeader">Results:</h2>
+    <p id="exchangeRate"></p>
+    <p id="exchangeResults"></p>
   </div>
 </body>
 </html>
