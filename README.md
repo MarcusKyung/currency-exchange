@@ -2,14 +2,30 @@
 
 #### By _**Marcus Kyung**_
 
-#### _{Brief description of application}_
+#### _This application uses ExchangeRate-API to return conversion rates between two currencies as well as return an amount of one currency in another._
 
 ## Technologies Used
 
 * _HTML_
 * _CSS_
 * _JavaScript_
-* _here_
+* _Node Package Manager_
+* _"@babel/core": "^7.18.6"_
+* _ "@babel/plugin-transform-modules-commonjs": "^7.18.6"_
+* _"clean-webpack-plugin": "^3.0.0"_
+* _"css-loader": "^3.6.0"_
+* _"dotenv-webpack": "^2.0.0"_
+* _"eslint": "^8.18.0"_
+* _"eslint-webpack-plugin": "^2.7.0"_
+* _"file-loader": "^6.2.0"_
+* _"html-loader": "^1.3.2"_
+* _"html-webpack-plugin": "^4.5.2"_
+* _"jest": "^24.9.0"_
+* _"style-loader": "^1.3.0"_
+* _"webpack": "4.46.0"_
+* _"webpack-cli": "^3.3.12"_
+* _"webpack-dev-server": "3.11.3"_
+* _"ExchangeRate-API_
 
 ## Description
 
