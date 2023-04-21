@@ -13,3 +13,21 @@
   background-color: white;
 }
  */
+
+body {
+  font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+h4 {
+  font-style: italic;
+}
+
+p {
+  padding: 0px;
+  margin: 0px;
+}

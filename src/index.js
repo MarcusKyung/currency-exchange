@@ -14,10 +14,21 @@ function getCurrency(currencyFrom, currencyTo, currencyAmount) {
 
 // UI Logic
 function printElements(response) {
-  const exchangeRateResults = document.getElementById('exchangeRate');
-  const exchangeAmountResults = document.getElementById('exchangeResults');
-  exchangeRateResults.innerText = `As of ${response[0].time_last_update_utc} the current exchange rate from ${response[1]} to ${response[2]} is ${response[0].conversion_rate}.`;
-  exchangeAmountResults.innerText = `${response[3]} of ${response[1]} in ${response[2]} is ${response[0].conversion_result} `;
+  const resultsDiv = document.getElementById('resultsDiv');
+  resultsDiv.setAttribute('class', 'row');
+  const resultsContainer = document.createElement('div');
+  resultsDiv.appendChild(resultsContainer);
+  const currencies = document.createElement('h4');
+  currencies.innerText = `${response[1]}/${response[2]} (as of ${response[0].time_last_update_utc})`;
+  resultsContainer.appendChild(currencies);
+  const exchangeRateResults = document.createElement('p');
+  exchangeRateResults.innerText = `1 ${response[1]} >>> ${response[2]} is ${response[0].conversion_rate}.`;
+  resultsContainer.appendChild(exchangeRateResults);
+  const exchangeAmountResults = document.createElement('p');
+  exchangeAmountResults.innerText = `${response[3]} ${response[1]} converted to ${response[2]} is ${response[0].conversion_result} ${response[2]}`;
+  resultsContainer.appendChild(exchangeAmountResults);
+  const spacing = document.createElement('hr');
+  resultsContainer.appendChild(spacing);
 }
 
 function printError(error) {
