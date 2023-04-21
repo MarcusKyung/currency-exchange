@@ -340,12 +340,10 @@
         <option value="ZMW" id="ZMWTo">Zambian Kwacha---Zambia</option>
         <option value="ZWL" id="ZWLTo">Zimbabwean Dollar---Zimbabwe</option>
       </select>
+      <label for="currencyAmount">Amount:</label>
+      <input id="currencyAmount" type="number" name="currencyAmount" min="1" required>
     </form>
-    <h2>Results:</h2>
-    <ul id="resultsUl">
-      <li id="exchangeRate" class="hidden"></li>
-      <li id="exchangedValue" class="hidden"></li>
-    </ul>
+    <h2 id="resultsHeader">Results:</h2>
   </div>
 </body>
 </html>
