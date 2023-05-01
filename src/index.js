@@ -3,48 +3,48 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrencyService from './currency-service';
 
-function getCurrency(currencyFrom, currencyTo, currencyAmount) {
-  let promise = CurrencyService.getCurrency(currencyFrom, currencyTo, currencyAmount);
-  promise.then(function(response) {
-    printElements(response);
-  }, function(errorMessage) {
-    printError(errorMessage);
-  });
+async function getCurrency(currencyFrom, currencyTo, currencyAmount) {
+  const response = await CurrencyService.getCurrency(currencyFrom, currencyTo, currencyAmount);
+  if (response.result === "success") {
+    printElements(response, currencyFrom, currencyTo, currencyAmount);
+  } else {
+    printError(response, currencyFrom, currencyTo, currencyAmount);
+  }
 }
-// ${response[0].time_last_update_utc}
+
 // UI Logic
-function printElements(response) {
+function printElements(response, currencyFrom, currencyTo, currencyAmount) {
   const resultsDiv = document.getElementById('resultsDiv');
   resultsDiv.setAttribute('class', 'row print');
   const resultsContainer = document.createElement('div');
   resultsDiv.appendChild(resultsContainer);
   const currencies = document.createElement('h4');
-  currencies.innerText = `${response[1]}/${response[2]}`;
+  currencies.innerText = `${currencyFrom}/${currencyTo}`;
   resultsContainer.appendChild(currencies);
   const updateTime = document.createElement('p');  
-  updateTime.innerText = `Conversion Rate as of : ${response[0].time_last_update_utc} UTC`;
+  updateTime.innerText = `Conversion Rate as of : ${response.time_last_update_utc} UTC`;
   updateTime.setAttribute('class', 'time');
   resultsContainer.appendChild(updateTime);
   const exchangeRateResults = document.createElement('p');
-  exchangeRateResults.innerText = `1 ${response[1]} >>> ${response[0].conversion_rate} ${response[2] }`;
+  exchangeRateResults.innerText = `1 ${currencyFrom} >>> ${response.conversion_rate} ${currencyTo}`;
   resultsContainer.appendChild(exchangeRateResults);
   const exchangeAmountResults = document.createElement('p');
-  exchangeAmountResults.innerText = `${response[3]} ${response[1]} converted to ${response[2]} is ${response[0].conversion_result} ${response[2]}`;
+  exchangeAmountResults.innerText = `${currencyAmount} ${currencyFrom} converted to ${currencyTo} is ${response.conversion_result} ${currencyTo}`;
   resultsContainer.appendChild(exchangeAmountResults);
   const spacing = document.createElement('hr');
   resultsContainer.appendChild(spacing);
 }
 
-function printError(error) {
+function printError(error, currencyFrom, currencyTo) {
   const resultsDiv = document.getElementById('resultsDiv');
   resultsDiv.setAttribute('class', 'row');
   const resultsContainer = document.createElement('div');
-  resultsDiv.appendChild(resultsContainer);
+  resultsDiv.append(resultsContainer);
   const errorMessage = document.createElement('h4');
-  errorMessage.innerText = `There was an error accessing currency exchange data for ${error[2]} and ${error[3]} - Error Code: ${error[0].status} ${error[1]["error-type"]}`;
-  resultsContainer.appendChild(errorMessage);
+  errorMessage.innerText = `There was an error accessing currency exchange data for ${currencyFrom} and ${currencyTo} - Error Code: ${error}`;
+  resultsContainer.append(errorMessage);
   const spacing = document.createElement('hr');
-  resultsContainer.appendChild(spacing);
+  resultsContainer.append(spacing);
 }
 
 function handleFormSubmission(event) {

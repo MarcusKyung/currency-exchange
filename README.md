@@ -47,7 +47,7 @@ _This application is designed to convert currencies using live exchange rate dat
 
 ## Known Bugs
 
-* _No known issues as of 4/21/23_
+* _No known issues as of 4/30/23_
 
 ## License
 
