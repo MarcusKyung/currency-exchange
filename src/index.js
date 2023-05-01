@@ -5,7 +5,7 @@ import CurrencyService from './currency-service';
 
 async function getCurrency(currencyFrom, currencyTo, currencyAmount) {
   const response = await CurrencyService.getCurrency(currencyFrom, currencyTo, currencyAmount);
-  if (response.result === "success") {
+  if (response.result) {
     printElements(response, currencyFrom, currencyTo, currencyAmount);
   } else {
     printError(response, currencyFrom, currencyTo, currencyAmount);
